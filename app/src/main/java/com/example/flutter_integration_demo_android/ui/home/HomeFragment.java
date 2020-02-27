@@ -1,9 +1,11 @@
 package com.example.flutter_integration_demo_android.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -13,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flutter_integration_demo_android.R;
+import com.example.flutter_integration_demo_android.TestActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -30,6 +33,16 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        final Button btn = root.findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TestActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return root;
     }
 }
