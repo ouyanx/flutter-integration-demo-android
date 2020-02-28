@@ -6,8 +6,6 @@ import android.view.View;
 
 //import com.tencent.flutter_integration.FlutterIntegrationFragment;
 
-import java.util.Random;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
